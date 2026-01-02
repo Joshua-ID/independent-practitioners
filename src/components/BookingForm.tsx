@@ -134,7 +134,7 @@ export const BookingForm = ({
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
-      <div className="bg-purple-50 p-6 rounded-xl border border-purple-200">
+      <div className="bg-green-50 p-6 rounded-xl border border-green-200">
         <h3 className="font-semibold text-gray-900 mb-2">Booking Summary</h3>
         <div className="space-y-2 text-sm text-gray-700">
           <p>
@@ -163,7 +163,7 @@ export const BookingForm = ({
               <p>
                 <strong>Total Sessions:</strong> {recurringOccurrences.length}
               </p>
-              <p className="text-purple-700 font-semibold">
+              <p className="text-green-700 font-semibold">
                 {recurrenceRule.type === "daily" &&
                   `Repeats every ${recurrenceRule.interval} day(s)`}
                 {recurrenceRule.type === "weekly" &&
@@ -203,7 +203,7 @@ export const BookingForm = ({
             onChange={(e) =>
               setFormData({ ...formData, clientName: e.target.value })
             }
-            className={`w-full px-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent min-h-[44px] ${
+            className={`w-full px-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent min-h-[44px] ${
               errors.clientName ? "border-red-500" : "border-gray-300"
             }`}
             placeholder="Please enter your fullname"
@@ -224,7 +224,7 @@ export const BookingForm = ({
             onChange={(e) =>
               setFormData({ ...formData, clientEmail: e.target.value })
             }
-            className={`w-full px-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent min-h-[44px] ${
+            className={`w-full px-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent min-h-[44px] ${
               errors.clientEmail ? "border-red-500" : "border-gray-300"
             }`}
             placeholder="Please enter your email address"
@@ -245,7 +245,7 @@ export const BookingForm = ({
             onChange={(e) =>
               setFormData({ ...formData, clientPhone: e.target.value })
             }
-            className={`w-full px-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent min-h-[44px] ${
+            className={`w-full px-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent min-h-[44px] ${
               errors.clientPhone ? "border-red-500" : "border-gray-300"
             }`}
             placeholder="+234 800 000 0000"
@@ -264,7 +264,7 @@ export const BookingForm = ({
             onChange={(e) =>
               setFormData({ ...formData, serviceType: e.target.value })
             }
-            className="w-full px-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent min-h-[44px]"
+            className="w-full px-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent min-h-[44px]"
           >
             {serviceTypes.map((service) => (
               <option key={service.value} value={service.value}>
@@ -284,7 +284,7 @@ export const BookingForm = ({
           value={formData.notes}
           onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
           rows={4}
-          className="w-full px-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent resize-none"
+          className="w-full px-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent resize-none"
           placeholder="Any specific concerns or preferences..."
         />
       </div>
@@ -293,7 +293,7 @@ export const BookingForm = ({
         <button
           type="submit"
           disabled={isSubmitting}
-          className="flex-1 bg-purple-600 text-white py-3 px-6 rounded-full active:bg-purple-800 active:scale-95 transition-all font-semibold shadow-md hover:shadow-lg min-h-[44px] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+          className="flex-1 bg-green-600 text-white py-3 px-6 rounded-full active:bg-green-800 active:scale-95 transition-all font-semibold shadow-md hover:shadow-lg min-h-[44px] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
         >
           {isSubmitting ? (
             <>
@@ -311,7 +311,7 @@ export const BookingForm = ({
           type="button"
           onClick={onCancel}
           disabled={isSubmitting}
-          className="flex-1 sm:flex-none bg-white text-purple-700 py-3 px-6 rounded-full active:bg-purple-50 active:scale-95 transition-all font-semibold border-2 border-purple-600 min-h-[44px] disabled:opacity-50"
+          className="flex-1 sm:flex-none bg-white text-green-700 py-3 px-6 rounded-full active:bg-green-50 active:scale-95 transition-all font-semibold border-2 border-green-600 min-h-[44px] disabled:opacity-50"
         >
           Cancel
         </button>

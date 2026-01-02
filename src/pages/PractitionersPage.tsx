@@ -6,11 +6,11 @@ import { Link } from "react-router-dom";
 
 export default function PractitionersPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-lavender-50">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-lavender-50">
       <Header />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-purple-600 to-purple-800 text-white py-20">
+      <section className="bg-gradient-to-r from-green-600 to-green-800 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="flex items-center justify-center mb-6">
@@ -19,7 +19,7 @@ export default function PractitionersPage() {
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
               Meet Our Expert Team
             </h1>
-            <p className="text-xl text-purple-100 max-w-3xl mx-auto">
+            <p className="text-xl text-green-100 max-w-3xl mx-auto">
               Our licensed therapists and counselors are dedicated to supporting
               your mental health journey with compassion and expertise
             </p>
@@ -33,7 +33,7 @@ export default function PractitionersPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="flex items-center justify-center mb-3">
-                <Award className="w-8 h-8 text-purple-600" />
+                <Award className="w-8 h-8 text-green-600" />
               </div>
               <div className="text-3xl font-bold text-gray-900 mb-1">6</div>
               <div className="text-sm text-gray-600">
@@ -42,7 +42,7 @@ export default function PractitionersPage() {
             </div>
             <div className="text-center">
               <div className="flex items-center justify-center mb-3">
-                <Star className="w-8 h-8 text-purple-600" />
+                <Star className="w-8 h-8 text-green-600" />
               </div>
               <div className="text-3xl font-bold text-gray-900 mb-1">15+</div>
               <div className="text-sm text-gray-600">
@@ -51,14 +51,14 @@ export default function PractitionersPage() {
             </div>
             <div className="text-center">
               <div className="flex items-center justify-center mb-3">
-                <Heart className="w-8 h-8 text-purple-600" />
+                <Heart className="w-8 h-8 text-green-600" />
               </div>
               <div className="text-3xl font-bold text-gray-900 mb-1">1000+</div>
               <div className="text-sm text-gray-600">Clients Helped</div>
             </div>
             <div className="text-center">
               <div className="flex items-center justify-center mb-3">
-                <Users className="w-8 h-8 text-purple-600" />
+                <Users className="w-8 h-8 text-green-600" />
               </div>
               <div className="text-3xl font-bold text-gray-900 mb-1">12+</div>
               <div className="text-sm text-gray-600">Specializations</div>
@@ -95,7 +95,7 @@ export default function PractitionersPage() {
                   <h3 className="text-2xl font-bold text-gray-900 mb-1">
                     {practitioner.name}
                   </h3>
-                  <p className="text-purple-600 font-medium mb-3">
+                  <p className="text-green-600 font-medium mb-3">
                     {practitioner.title}
                   </p>
                   <p className="text-gray-700 mb-4 line-clamp-3">
@@ -103,7 +103,7 @@ export default function PractitionersPage() {
                   </p>
                   <div className="mb-4">
                     <div className="flex items-center gap-2 text-sm text-gray-600 mb-2">
-                      <Award className="w-4 h-4 text-purple-600" />
+                      <Award className="w-4 h-4 text-green-600" />
                       <span>{practitioner.experience} of experience</span>
                     </div>
                   </div>
@@ -115,7 +115,7 @@ export default function PractitionersPage() {
                       {practitioner.specialties.map((specialty, index) => (
                         <span
                           key={index}
-                          className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-medium"
+                          className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-medium"
                         >
                           {specialty}
                         </span>
@@ -124,7 +124,7 @@ export default function PractitionersPage() {
                   </div>
                   <Link
                     to="/book"
-                    className="block w-full text-center bg-purple-600 text-white py-3 rounded-full font-semibold hover:bg-purple-700 active:bg-purple-800 transition-colors"
+                    className="block w-full text-center bg-green-600 text-white py-3 rounded-full font-semibold hover:bg-green-700 active:bg-green-800 transition-colors"
                   >
                     Book Session
                   </Link>
@@ -136,18 +136,18 @@ export default function PractitionersPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-purple-600 to-purple-800 text-white">
+      <section className="py-16 bg-gradient-to-r from-green-600 to-green-800 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to Start Your Journey?
           </h2>
-          <p className="text-xl text-purple-100 mb-8">
+          <p className="text-xl text-green-100 mb-8">
             Choose a practitioner that resonates with you and take the first
             step towards better mental health
           </p>
           <a
             href="/book"
-            className="inline-block bg-white text-purple-700 px-8 py-4 rounded-full font-semibold hover:bg-purple-50 active:bg-purple-100 transition-colors shadow-lg"
+            className="inline-block bg-white text-green-700 px-8 py-4 rounded-full font-semibold hover:bg-green-50 active:bg-green-100 transition-colors shadow-lg"
           >
             Schedule Your First Session
           </a>

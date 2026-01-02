@@ -29,9 +29,9 @@ export const WhyChooseUs = () => {
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="group p-8 rounded-2xl bg-gradient-to-br from-purple-50 to-violet-50 active:shadow-xl transition-all duration-300 hover:-translate-y-1 min-h-[200px] flex flex-col"
+              className="group p-8 rounded-2xl bg-gradient-to-br from-green-50 to-violet-50 active:shadow-xl transition-all duration-300 hover:-translate-y-1 min-h-[200px] flex flex-col"
             >
-              <div className="w-14 h-14 bg-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform min-h-[44px] min-w-[44px]">
+              <div className="w-14 h-14 bg-green-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform min-h-[44px] min-w-[44px]">
                 <i
                   className={`hgi-stroke hgi-${
                     iconMap[benefit.icon]

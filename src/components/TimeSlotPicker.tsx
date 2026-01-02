@@ -113,7 +113,7 @@ export const TimeSlotPicker = ({
       <div>
         <div className="flex items-center flex-wrap gap-3 justify-between mb-4">
           <h3 className="text-medium font-semibold text-gray-900 flex items-center gap-2">
-            <Calendar size={18} className="text-purple-600" />
+            <Calendar size={18} className="text-green-600" />
             Select Date
           </h3>
 
@@ -125,20 +125,20 @@ export const TimeSlotPicker = ({
               max={maxDate}
               value={selectedDate}
               onChange={handleDateInputChange}
-              className="px-3 py-2 border-2 border-purple-300 rounded-lg text-sm font-medium text-gray-700 focus:border-purple-600 focus:outline-none min-h-[44px]"
+              className="px-3 py-2 border-2 border-green-300 rounded-lg text-sm font-medium text-gray-700 focus:border-green-600 focus:outline-none min-h-[44px]"
             />
           </div>
         </div>
 
         {/* Month Navigation */}
-        <div className="flex items-center justify-between mb-4 bg-purple-50 rounded-lg p-1">
+        <div className="flex items-center justify-between mb-4 bg-green-50 rounded-lg p-1">
           <button
             onClick={goToPreviousMonth}
             disabled={!canGoPrevious}
-            className="p-2 rounded-full hover:bg-purple-200 active:bg-purple-200 disabled:opacity-40 disabled:cursor-not-allowed transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
+            className="p-2 rounded-full hover:bg-green-200 active:bg-green-200 disabled:opacity-40 disabled:cursor-not-allowed transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
             aria-label="Previous month"
           >
-            <ChevronLeft size={20} className="text-purple-700" />
+            <ChevronLeft size={20} className="text-green-700" />
           </button>
           <span className="font-semibold text-gray-900">
             {formatMonthYear(currentMonth)}
@@ -146,10 +146,10 @@ export const TimeSlotPicker = ({
           <button
             onClick={goToNextMonth}
             disabled={!canGoNext}
-            className="p-2 rounded-full hover:bg-purple-200 active:bg-purple-200 disabled:opacity-40 disabled:cursor-not-allowed transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
+            className="p-2 rounded-full hover:bg-green-200 active:bg-green-200 disabled:opacity-40 disabled:cursor-not-allowed transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
             aria-label="Next month"
           >
-            <ChevronRight size={20} className="text-purple-700" />
+            <ChevronRight size={20} className="text-green-700" />
           </button>
         </div>
 
@@ -165,9 +165,9 @@ export const TimeSlotPicker = ({
                   disabled={!hasSlots}
                   className={`py-3 px-4 rounded-lg border-2 transition-all text-xs sm:text-sm font-medium min-h-[44px] relative ${
                     selectedDate === date
-                      ? "border-purple-600 bg-purple-50 text-purple-700"
+                      ? "border-green-600 bg-green-50 text-green-700"
                       : hasSlots
-                      ? "border-gray-200 hover:border-purple-300 active:border-purple-400"
+                      ? "border-gray-200 hover:border-green-300 active:border-green-400"
                       : "border-gray-200 bg-gray-50 text-gray-400 cursor-not-allowed"
                   }`}
                 >
@@ -189,9 +189,9 @@ export const TimeSlotPicker = ({
       {selectedDate && (
         <div>
           <h3 className="text-medium font-semibold text-gray-900 mb-4 flex items-center gap-2">
-            <Clock size={20} className="text-purple-600" />
+            <Clock size={20} className="text-green-600" />
             Select Time{" "}
-            <span className="bg-purple-200 px-2 py-0.5 rounded-md">
+            <span className="bg-green-200 px-2 py-0.5 rounded-md">
               {" "}
               {formatDate(selectedDate)}
             </span>
@@ -204,9 +204,9 @@ export const TimeSlotPicker = ({
                 disabled={!slot.available}
                 className={`py-3 px-4 rounded-lg border-2 transition-all text-xs sm:text-sm font-medium min-h-[44px] ${
                   selectedSlot?.id === slot.id
-                    ? "border-purple-600 bg-purple-50 text-purple-700"
+                    ? "border-green-600 bg-green-50 text-green-700"
                     : slot.available
-                    ? "border-gray-200 hover:border-purple-300 active:border-purple-400"
+                    ? "border-gray-200 hover:border-green-300 active:border-green-400"
                     : "border-gray-200 bg-gray-50 text-gray-400 cursor-not-allowed"
                 }`}
               >

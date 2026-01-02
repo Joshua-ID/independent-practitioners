@@ -33,7 +33,7 @@ export const CTASection = () => {
               {cta.benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start gap-3">
                   <CheckCircle
-                    className="text-purple-600 flex-shrink-0 mt-1"
+                    className="text-green-600 flex-shrink-0 mt-1"
                     size={24}
                   />
                   <p className="text-lg text-gray-700">{benefit}</p>
@@ -44,7 +44,7 @@ export const CTASection = () => {
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Link
                 to="/book"
-                className="group bg-purple-600 text-white px-8 py-4 rounded-full active:bg-purple-800 active:scale-95 transition-all shadow-lg hover:shadow-xl font-semibold flex items-center justify-center gap-2 min-h-[44px]"
+                className="group bg-green-600 text-white px-8 py-4 rounded-full active:bg-green-800 active:scale-95 transition-all shadow-lg hover:shadow-xl font-semibold flex items-center justify-center gap-2 min-h-[44px]"
               >
                 {cta.primaryCTA}
                 <ArrowRight
@@ -54,7 +54,7 @@ export const CTASection = () => {
               </Link>
               <Link
                 to="/contact"
-                className="bg-white text-purple-700 px-8 py-4 rounded-full active:bg-purple-50 active:scale-95 transition-all shadow-md font-semibold border-2 border-purple-600 min-h-[44px]"
+                className="bg-white text-green-700 px-8 py-4 rounded-full active:bg-green-50 active:scale-95 transition-all shadow-md font-semibold border-2 border-green-600 min-h-[44px]"
               >
                 {cta.secondaryCTA}
               </Link>

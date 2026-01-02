@@ -78,11 +78,11 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-lavender-50">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-lavender-50">
       <Header />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-purple-600 to-purple-800 text-white py-20">
+      <section className="bg-gradient-to-r from-green-600 to-green-800 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="flex items-center justify-center mb-6">
@@ -91,7 +91,7 @@ export default function ContactPage() {
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
               Get In Touch
             </h1>
-            <p className="text-xl text-purple-100 max-w-3xl mx-auto">
+            <p className="text-xl text-green-100 max-w-3xl mx-auto">
               Have questions or need support? We're here to help. Reach out to
               us and we'll get back to you as soon as possible.
             </p>
@@ -112,8 +112,8 @@ export default function ContactPage() {
 
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
-                    <div className="p-3 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
-                      <Phone className="w-4 h-4 text-purple-600" />
+                    <div className="p-3 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                      <Phone className="w-4 h-4 text-green-600" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">
@@ -125,8 +125,8 @@ export default function ContactPage() {
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <div className="p-3 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
-                      <Mail className="w-4 h-4 text-purple-600" />
+                    <div className="p-3 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                      <Mail className="w-4 h-4 text-green-600" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">
@@ -140,8 +140,8 @@ export default function ContactPage() {
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <div className="p-3 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
-                      <MapPin className="w-4 h-4 text-purple-600" />
+                    <div className="p-3 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                      <MapPin className="w-4 h-4 text-green-600" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">
@@ -155,8 +155,8 @@ export default function ContactPage() {
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <div className="p-3 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
-                      <Clock className="w-4 h-4 text-purple-600" />
+                    <div className="p-3 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                      <Clock className="w-4 h-4 text-green-600" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">
@@ -174,17 +174,17 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="bg-purple-50 rounded-2xl border-2 border-purple-200 p-6">
-                <h3 className="font-semibold text-purple-900 mb-3">
+              <div className="bg-green-50 rounded-2xl border-2 border-green-200 p-6">
+                <h3 className="font-semibold text-green-900 mb-3">
                   Emergency Support
                 </h3>
-                <p className="text-sm text-purple-800 mb-3">
+                <p className="text-sm text-green-800 mb-3">
                   If you're experiencing a mental health emergency, please call:
                 </p>
-                <p className="text-lg font-bold text-purple-900 mb-2">
+                <p className="text-lg font-bold text-green-900 mb-2">
                   988 - Suicide & Crisis Lifeline
                 </p>
-                <p className="text-sm text-purple-800">Available 24/7</p>
+                <p className="text-sm text-green-800">Available 24/7</p>
               </div>
             </div>
 
@@ -225,7 +225,7 @@ export default function ContactPage() {
                         onChange={(e) =>
                           setFormData({ ...formData, name: e.target.value })
                         }
-                        className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 min-h-[44px] ${
+                        className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 min-h-[44px] ${
                           errors.name ? "border-red-100" : "border-gray-300"
                         }`}
                         placeholder="Please enter your full name"
@@ -251,7 +251,7 @@ export default function ContactPage() {
                         onChange={(e) =>
                           setFormData({ ...formData, email: e.target.value })
                         }
-                        className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 min-h-[44px] ${
+                        className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 min-h-[44px] ${
                           errors.email ? "border-red-100" : "border-gray-300"
                         }`}
                         placeholder="Please enter your email address"
@@ -279,7 +279,7 @@ export default function ContactPage() {
                         onChange={(e) =>
                           setFormData({ ...formData, phone: e.target.value })
                         }
-                        className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 min-h-[44px]"
+                        className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 min-h-[44px]"
                         placeholder="Please enter your phone number"
                       />
                     </div>
@@ -298,7 +298,7 @@ export default function ContactPage() {
                         onChange={(e) =>
                           setFormData({ ...formData, subject: e.target.value })
                         }
-                        className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 min-h-[44px] ${
+                        className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 min-h-[44px] ${
                           errors.subject ? "border-red-100" : "border-gray-300"
                         }`}
                         placeholder="How can we help?"
@@ -325,7 +325,7 @@ export default function ContactPage() {
                       onChange={(e) =>
                         setFormData({ ...formData, message: e.target.value })
                       }
-                      className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 resize-none ${
+                      className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 resize-none ${
                         errors.message ? "border-red-100" : "border-gray-300"
                       }`}
                       placeholder="Tell us more about what you need..."
@@ -340,7 +340,7 @@ export default function ContactPage() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-purple-600 text-white py-4 rounded-full font-semibold hover:bg-purple-700 active:bg-purple-800 transition-colors shadow-md hover:shadow-lg min-h-[44px] flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full bg-green-600 text-white py-4 rounded-full font-semibold hover:bg-green-700 active:bg-green-800 transition-colors shadow-md hover:shadow-lg min-h-[44px] flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isSubmitting ? (
                       <>
@@ -368,7 +368,7 @@ export default function ContactPage() {
             Frequently Asked Questions
           </h2>
           <div className="space-y-3">
-            <div className="bg-purple-50 rounded-xl p-6">
+            <div className="bg-green-50 rounded-xl p-6">
               <h3 className="text-lg font-bold text-gray-900 mb-2">
                 How quickly will I receive a response?
               </h3>
@@ -378,7 +378,7 @@ export default function ContactPage() {
               </p>
             </div>
 
-            <div className="bg-purple-50 rounded-xl p-6">
+            <div className="bg-green-50 rounded-xl p-6">
               <h3 className="text-lg font-bold text-gray-900 mb-2">
                 Do you accept insurance?
               </h3>
@@ -388,7 +388,7 @@ export default function ContactPage() {
               </p>
             </div>
 
-            <div className="bg-purple-50 rounded-xl p-6">
+            <div className="bg-green-50 rounded-xl p-6">
               <h3 className="text-lg font-bold text-gray-900 mb-2">
                 Can I schedule an appointment online?
               </h3>
@@ -398,7 +398,7 @@ export default function ContactPage() {
               </p>
             </div>
 
-            <div className="bg-purple-50 rounded-xl p-6">
+            <div className="bg-green-50 rounded-xl p-6">
               <h3 className="text-lg font-bold text-gray-900 mb-2">
                 Do you offer telehealth sessions?
               </h3>

@@ -115,7 +115,7 @@ export const BookingPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-violet-50">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 to-violet-50">
       {/* Header */}
       <div className="bg-white border-b border-gray-200 sticky top-0 z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -129,14 +129,14 @@ export const BookingPage = () => {
                   <ArrowLeft size={24} />
                 </button>
               )}
-              <h1 className="md:text-2xl text-lg font-bold text-purple-700 flex items-center gap-2">
-                <Calendar className="text-purple-600" size={22} />
+              <h1 className="md:text-2xl text-lg font-bold text-green-700 flex items-center gap-2">
+                <Calendar className="text-green-600" size={22} />
                 Book a Session
               </h1>
             </div>
             <Link
               to="/"
-              className="text-purple-600 flex items-center gap-2 hover:text-purple-700 font-medium"
+              className="text-green-600 flex items-center gap-2 hover:text-green-700 font-medium"
             >
               <HomeIcon size={18} />
               <span className="hidden sm:flex">Home</span>
@@ -152,13 +152,13 @@ export const BookingPage = () => {
             <div className="flex items-center justify-center gap-2 md:gap-4">
               <div
                 className={`flex items-center gap-2 ${
-                  step === "practitioners" ? "text-purple-600" : "text-gray-400"
+                  step === "practitioners" ? "text-green-600" : "text-gray-400"
                 }`}
               >
                 <div
                   className={`w-8 h-8 rounded-full flex items-center justify-center font-semibold ${
                     step === "practitioners"
-                      ? "bg-purple-600 text-white"
+                      ? "bg-green-600 text-white"
                       : "bg-gray-200"
                   }`}
                 >
@@ -172,14 +172,14 @@ export const BookingPage = () => {
               <div
                 className={`flex items-center gap-2 ${
                   step === "timeslot" || step === "form"
-                    ? "text-purple-600"
+                    ? "text-green-600"
                     : "text-gray-400"
                 }`}
               >
                 <div
                   className={`w-8 h-8 rounded-full flex items-center justify-center font-semibold ${
                     step === "timeslot" || step === "form"
-                      ? "bg-purple-600 text-white"
+                      ? "bg-green-600 text-white"
                       : "bg-gray-200"
                   }`}
                 >
@@ -192,12 +192,12 @@ export const BookingPage = () => {
               <div className="w-8 md:w-16 h-0.5 bg-gray-200"></div>
               <div
                 className={`flex items-center gap-2 ${
-                  step === "form" ? "text-purple-600" : "text-gray-400"
+                  step === "form" ? "text-green-600" : "text-gray-400"
                 }`}
               >
                 <div
                   className={`w-8 h-8 rounded-full flex items-center justify-center font-semibold ${
-                    step === "form" ? "bg-purple-600 text-white" : "bg-gray-200"
+                    step === "form" ? "bg-green-600 text-white" : "bg-gray-200"
                   }`}
                 >
                   3
@@ -251,7 +251,7 @@ export const BookingPage = () => {
                   <h2 className="text-2xl font-bold text-gray-900">
                     {selectedPractitioner.name}
                   </h2>
-                  <p className="text-purple-600 font-medium">
+                  <p className="text-green-600 font-medium">
                     {selectedPractitioner.title}
                   </p>
                 </div>
@@ -351,8 +351,8 @@ export const BookingPage = () => {
                     ))}
                   </div>
 
-                  <div className="mt-6 p-4 bg-purple-50 border border-purple-200 rounded-lg">
-                    <p className="text-sm font-medium text-purple-900">
+                  <div className="mt-6 p-4 bg-green-50 border border-green-200 rounded-lg">
+                    <p className="text-sm font-medium text-green-900">
                       {recurringOccurrences.filter((o) => o.available).length}{" "}
                       of {recurringOccurrences.length} appointments will be
                       scheduled
@@ -364,10 +364,10 @@ export const BookingPage = () => {
             <div className="mt-8 w-full flex justify-center items-center">
               <button
                 onClick={handleContinueToForm}
-                className={`w-full bg-purple-600 text-white py-3 px-6 rounded-full ${
+                className={`w-full bg-green-600 text-white py-3 px-6 rounded-full ${
                   selectedSlot
-                    ? "active:bg-purple-800 active:scale-95 transition-all shadow-md hover:shadow-lg min-h-[44px]"
-                    : "cursor-not-allowed bg-purple-300!  font-semibold"
+                    ? "active:bg-green-800 active:scale-95 transition-all shadow-md hover:shadow-lg min-h-[44px]"
+                    : "cursor-not-allowed bg-green-300!  font-semibold"
                 }`}
               >
                 {" "}
@@ -418,7 +418,7 @@ export const BookingPage = () => {
                 <strong>{confirmedBooking.clientEmail}</strong>
               </p>
 
-              <div className="bg-purple-50 rounded-xl p-6 mb-8 text-left">
+              <div className="bg-green-50 rounded-xl p-6 mb-8 text-left">
                 <h3 className="font-semibold text-gray-900 mb-4 text-center">
                   Appointment Details
                 </h3>
@@ -465,13 +465,13 @@ export const BookingPage = () => {
               <div className="space-y-4">
                 <button
                   onClick={handleNewBooking}
-                  className="w-full bg-purple-600 text-white py-3 px-6 rounded-full active:bg-purple-800 active:scale-95 transition-all font-semibold shadow-md hover:shadow-lg min-h-[44px]"
+                  className="w-full bg-green-600 text-white py-3 px-6 rounded-full active:bg-green-800 active:scale-95 transition-all font-semibold shadow-md hover:shadow-lg min-h-[44px]"
                 >
                   Book Another Session
                 </button>
                 <Link
                   to="/"
-                  className="block w-full bg-white text-purple-700 py-3 px-6 rounded-full active:bg-purple-50 active:scale-95 transition-all font-semibold border-2 border-purple-600 min-h-[44px]"
+                  className="block w-full bg-white text-green-700 py-3 px-6 rounded-full active:bg-green-50 active:scale-95 transition-all font-semibold border-2 border-green-600 min-h-[44px]"
                 >
                   Return to Home
                 </Link>

@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-lavender-50">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-lavender-50">
       <Header />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-purple-600 to-purple-800 text-white py-20">
+      <section className="bg-gradient-to-r from-green-600 to-green-800 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="flex items-center justify-center mb-6">
@@ -18,7 +18,7 @@ export default function AboutPage() {
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
               About TherapySpace
             </h1>
-            <p className="text-xl text-purple-100 max-w-3xl mx-auto">
+            <p className="text-xl text-green-100 max-w-3xl mx-auto">
               Empowering individuals and families to find balance, healing, and
               growth through compassionate professional care
             </p>
@@ -32,7 +32,7 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 gap-12">
             <div className="bg-white rounded-2xl shadow-lg p-8">
               <div className="flex items-center gap-3 mb-4">
-                <Target className="w-10 h-10 text-purple-600" />
+                <Target className="w-10 h-10 text-green-600" />
                 <h2 className="text-2xl font-bold text-gray-900">
                   Our Mission
                 </h2>
@@ -47,7 +47,7 @@ export default function AboutPage() {
 
             <div className="bg-white rounded-2xl shadow-lg p-8">
               <div className="flex items-center gap-3 mb-4">
-                <Sparkles className="w-10 h-10 text-purple-600" />
+                <Sparkles className="w-10 h-10 text-green-600" />
                 <h2 className="text-2xl font-bold text-gray-900">Our Vision</h2>
               </div>
               <p className="text-gray-700 text-lg leading-relaxed">
@@ -100,8 +100,8 @@ export default function AboutPage() {
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Heart className="w-8 h-8 text-purple-600" />
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Heart className="w-8 h-8 text-green-600" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">
                 Compassion
@@ -113,8 +113,8 @@ export default function AboutPage() {
             </div>
 
             <div className="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Award className="w-8 h-8 text-purple-600" />
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Award className="w-8 h-8 text-green-600" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">
                 Excellence
@@ -126,8 +126,8 @@ export default function AboutPage() {
             </div>
 
             <div className="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8 text-purple-600" />
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="w-8 h-8 text-green-600" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">
                 Confidentiality
@@ -139,8 +139,8 @@ export default function AboutPage() {
             </div>
 
             <div className="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-purple-600" />
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 text-green-600" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">
                 Inclusivity
@@ -152,8 +152,8 @@ export default function AboutPage() {
             </div>
 
             <div className="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Target className="w-8 h-8 text-purple-600" />
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Target className="w-8 h-8 text-green-600" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">
                 Client-Centered
@@ -165,8 +165,8 @@ export default function AboutPage() {
             </div>
 
             <div className="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Sparkles className="w-8 h-8 text-purple-600" />
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Sparkles className="w-8 h-8 text-green-600" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Growth</h3>
               <p className="text-gray-700">
@@ -179,24 +179,24 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-purple-600 to-purple-800 text-white">
+      <section className="py-16 bg-gradient-to-r from-green-600 to-green-800 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Begin Your Journey With Us
           </h2>
-          <p className="text-xl text-purple-100 mb-8">
+          <p className="text-xl text-green-100 mb-8">
             Take the first step toward better mental health and wellbeing
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/book"
-              className="inline-block bg-white text-purple-700 px-8 py-4 rounded-full font-semibold hover:bg-purple-50 active:bg-purple-100 transition-colors shadow-lg"
+              className="inline-block bg-white text-green-700 px-8 py-4 rounded-full font-semibold hover:bg-green-50 active:bg-green-100 transition-colors shadow-lg"
             >
               Book a Session
             </Link>
             <Link
               to="/contact"
-              className="inline-block bg-purple-700 text-white border-2 border-white px-8 py-4 rounded-full font-semibold hover:bg-purple-600 active:bg-purple-800 transition-colors"
+              className="inline-block bg-green-700 text-white border-2 border-white px-8 py-4 rounded-full font-semibold hover:bg-green-600 active:bg-green-800 transition-colors"
             >
               Contact Us
             </Link>

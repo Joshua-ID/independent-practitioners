@@ -6,10 +6,10 @@ export const Hero = () => {
   const { hero } = homepageData;
 
   return (
-    <section className="relative bg-gradient-to-br from-purple-50 via-violet-50 to-fuchsia-50 py-16 md:py-32 overflow-hidden">
+    <section className="relative bg-gradient-to-br from-green-50 via-violet-50 to-fuchsia-50 py-16 md:py-32 overflow-hidden">
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-purple-300 rounded-full blur-3xl"></div>
+        <div className="absolute top-20 left-10 w-72 h-72 bg-green-300 rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-violet-300 rounded-full blur-3xl"></div>
       </div>
 
@@ -17,8 +17,8 @@ export const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-8">
-            <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium text-purple-700 shadow-sm">
-              <CheckCircle size={16} className="text-purple-600" />
+            <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium text-green-700 shadow-sm">
+              <CheckCircle size={16} className="text-green-600" />
               {hero.trustSignal}
             </div>
 
@@ -33,7 +33,7 @@ export const Hero = () => {
             <div className="flex flex-col sm:flex-row fle gap-4">
               <Link
                 to="/book"
-                className="bg-purple-600 text-white px-8 py-4 rounded-full active:bg-purple-800 active:scale-95 transition-all shadow-lg hover:shadow-xl font-semibold flex items-center justify-center gap-2 min-h-[44px]"
+                className="bg-green-600 text-white px-8 py-4 rounded-full active:bg-green-800 active:scale-95 transition-all shadow-lg hover:shadow-xl font-semibold flex items-center justify-center gap-2 min-h-[44px]"
               >
                 {hero.primaryCTA}
                 <ArrowRight
@@ -43,7 +43,7 @@ export const Hero = () => {
               </Link>
               <Link
                 to="/practitioners"
-                className="bg-white text-purple-700 px-8 py-4 rounded-full active:bg-purple-50 active:scale-95 transition-all shadow-md font-semibold border-2 flex items-center justify-center  border-purple-600 min-h-[44px]"
+                className="bg-white text-green-700 px-8 py-4 rounded-full active:bg-green-50 active:scale-95 transition-all shadow-md font-semibold border-2 flex items-center justify-center  border-green-600 min-h-[44px]"
               >
                 {hero.secondaryCTA}
               </Link>
@@ -62,8 +62,8 @@ export const Hero = () => {
             {/* Floating Card */}
             <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl backdrop-blur-sm">
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
-                  <CheckCircle className="text-purple-600" size={24} />
+                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                  <CheckCircle className="text-green-600" size={24} />
                 </div>
                 <div>
                   <p className="text-2xl font-bold text-gray-900">500+</p>

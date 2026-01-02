@@ -126,20 +126,20 @@ export default function MyBookingsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-lavender-50">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-lavender-50">
       {/* Header */}
-      <header className="bg-white/80 backdrop-blur-md border-b border-purple-100 sticky top-0 z-40">
+      <header className="bg-white/80 backdrop-blur-md border-b border-green-100 sticky top-0 z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between">
             <Link
               to="/"
-              className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-purple-800 bg-clip-text text-transparent"
+              className="text-2xl font-bold bg-gradient-to-r from-green-600 to-green-800 bg-clip-text text-transparent"
             >
               TherapySpace
             </Link>
             <a
               href="/"
-              className="text-purple-600 hover:text-purple-800 font-medium transition-colors"
+              className="text-green-600 hover:text-green-800 font-medium transition-colors"
             >
               ← Back to Home
             </a>
@@ -170,7 +170,7 @@ export default function MyBookingsPage() {
             </p>
             <Link
               to="/book"
-              className="inline-block bg-gradient-to-r from-purple-600 to-purple-700 text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all"
+              className="inline-block bg-gradient-to-r from-green-600 to-green-700 text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all"
             >
               Book a Session
             </Link>
@@ -215,13 +215,13 @@ export default function MyBookingsPage() {
                 </span>
                 ?
               </p>
-              <div className="bg-purple-50 rounded-lg p-4 space-y-2">
+              <div className="bg-green-50 rounded-lg p-4 space-y-2">
                 <div className="flex items-center text-sm text-gray-700">
-                  <Calendar className="w-4 h-4 mr-2 text-purple-600" />
+                  <Calendar className="w-4 h-4 mr-2 text-green-600" />
                   {formatDate(selectedBooking.date)}
                 </div>
                 <div className="flex items-center text-sm text-gray-700">
-                  <Clock className="w-4 h-4 mr-2 text-purple-600" />
+                  <Clock className="w-4 h-4 mr-2 text-green-600" />
                   {selectedBooking.time}
                 </div>
               </div>
@@ -340,31 +340,31 @@ function BookingCard({
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
           <div className="space-y-2">
             <div className="flex items-center text-gray-700">
-              <Calendar className="w-4 h-4 mr-2 text-purple-600" />
+              <Calendar className="w-4 h-4 mr-2 text-green-600" />
               <span className="text-sm">{formatDate(booking.date)}</span>
             </div>
             <div className="flex items-center text-gray-700">
-              <Clock className="w-4 h-4 mr-2 text-purple-600" />
+              <Clock className="w-4 h-4 mr-2 text-green-600" />
               <span className="text-sm">{booking.time}</span>
             </div>
           </div>
 
           <div className="space-y-2">
             <div className="flex items-center text-gray-700">
-              <User className="w-4 h-4 mr-2 text-purple-600" />
+              <User className="w-4 h-4 mr-2 text-green-600" />
               <span className="text-sm">{booking.clientName}</span>
             </div>
             <div className="flex items-center text-gray-700">
-              <Phone className="w-4 h-4 mr-2 text-purple-600" />
+              <Phone className="w-4 h-4 mr-2 text-green-600" />
               <span className="text-sm">{booking.clientPhone}</span>
             </div>
           </div>
         </div>
 
         {booking.notes && (
-          <div className="mb-4 p-3 bg-purple-50 rounded-lg">
+          <div className="mb-4 p-3 bg-green-50 rounded-lg">
             <div className="flex items-start text-gray-700">
-              <MessageSquare className="w-4 h-4 mr-2 text-purple-600 mt-0.5" />
+              <MessageSquare className="w-4 h-4 mr-2 text-green-600 mt-0.5" />
               <p className="text-sm">{booking.notes}</p>
             </div>
           </div>
@@ -374,7 +374,7 @@ function BookingCard({
           <div className="flex gap-3">
             <button
               onClick={() => onReschedule(booking)}
-              className="flex-1 px-4 py-2 border-2 border-purple-300 rounded-full font-semibold text-purple-700 hover:bg-purple-50 transition-colors"
+              className="flex-1 px-4 py-2 border-2 border-green-300 rounded-full font-semibold text-green-700 hover:bg-green-50 transition-colors"
             >
               Reschedule
             </button>
@@ -430,7 +430,7 @@ function RescheduleModal({ booking, onClose, onSubmit }: RescheduleModalProps) {
         </div>
 
         <div className="p-3 sm:p-5">
-          <div className="mb-6 p-4 bg-purple-50 rounded-lg">
+          <div className="mb-6 p-4 bg-green-50 rounded-lg">
             <h4 className="font-semibold text-gray-900 mb-2">
               Current Appointment
             </h4>
@@ -473,7 +473,7 @@ function RescheduleModal({ booking, onClose, onSubmit }: RescheduleModalProps) {
           <button
             onClick={handleSubmit}
             disabled={!selectedSlot}
-            className="flex-1 px-6 py-3 bg-gradient-to-r from-purple-600 to-purple-700 text-white rounded-full font-semibold hover:shadow-lg whitespace-nowrap transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+            className="flex-1 px-6 py-3 bg-gradient-to-r from-green-600 to-green-700 text-white rounded-full font-semibold hover:shadow-lg whitespace-nowrap transition-all disabled:opacity-50 disabled:cursor-not-allowed"
           >
             Confirm Reschedule
           </button>

@@ -13,7 +13,7 @@ export const Header = () => {
           <div className="flex-shrink-0">
             <Link
               to="/"
-              className="md:text-2xl text-lg font-bold text-purple-700"
+              className="md:text-2xl text-lg font-bold text-green-700"
             >
               TherapySpace
             </Link>
@@ -23,31 +23,31 @@ export const Header = () => {
           <div className="hidden md:flex items-center text-sm md:font-medium space-x-3 md:space-x-6">
             <Link
               to="/practitioners"
-              className="text-gray-700 hover:text-purple-600 transition-colors"
+              className="text-gray-700 hover:text-green-600 transition-colors"
             >
               Practitioners
             </Link>
             <Link
               to="/about"
-              className="text-gray-700 hover:text-purple-600 transition-colors"
+              className="text-gray-700 hover:text-green-600 transition-colors"
             >
               About
             </Link>
             <Link
               to="/contact"
-              className="text-gray-700 hover:text-purple-600 transition-colors"
+              className="text-gray-700 hover:text-green-600 transition-colors"
             >
               Contact
             </Link>
             <Link
               to="/my-bookings"
-              className="text-gray-700 hover:text-purple-600 transition-colors font-medium"
+              className="text-gray-700 hover:text-green-600 transition-colors font-medium"
             >
               My Bookings
             </Link>
             <Link
               to="/book"
-              className="bg-purple-600 text-white px-6 py-2 rounded-full hover:bg-purple-700 active:bg-purple-800 active:scale-95 transition-all shadow-md hover:shadow-lg"
+              className="bg-green-600 text-white px-6 py-2 rounded-full hover:bg-green-700 active:bg-green-800 active:scale-95 transition-all shadow-md hover:shadow-lg"
             >
               Book Your Session
             </Link>
@@ -68,34 +68,34 @@ export const Header = () => {
           <div className="md:hidden py-4 space-y-3">
             <Link
               to="/practitioners"
-              className="block px-4 py-3 text-gray-700 active:bg-purple-50 rounded-lg min-h-[44px] flex items-center"
+              className="block px-4 py-3 text-gray-700 active:bg-green-50 rounded-lg min-h-[44px] flex items-center"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Practitioners
             </Link>
             <Link
               to="/about"
-              className="block px-4 py-3 text-gray-700 active:bg-purple-50 rounded-lg min-h-[44px] flex items-center"
+              className="block px-4 py-3 text-gray-700 active:bg-green-50 rounded-lg min-h-[44px] flex items-center"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               About
             </Link>
             <Link
               to="/contact"
-              className="block px-4 py-3 text-gray-700 active:bg-purple-50 rounded-lg min-h-[44px] flex items-center"
+              className="block px-4 py-3 text-gray-700 active:bg-green-50 rounded-lg min-h-[44px] flex items-center"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Contact
             </Link>
             <Link
               to="/my-bookings"
-              className="block px-4 py-3 text-gray-700 active:bg-purple-50 rounded-lg min-h-[44px] flex items-center font-medium"
+              className="block px-4 py-3 text-gray-700 active:bg-green-50 rounded-lg min-h-[44px] flex items-center font-medium"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               My Bookings
             </Link>
             <button
-              className="w-full bg-purple-600 text-white px-6 py-3 rounded-full active:bg-purple-800 active:scale-95 transition-all min-h-[44px]"
+              className="w-full bg-green-600 text-white px-6 py-3 rounded-full active:bg-green-800 active:scale-95 transition-all min-h-[44px]"
               onClick={() => (window.location.href = "/book")}
             >
               Book Your Session
