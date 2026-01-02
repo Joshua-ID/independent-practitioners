@@ -4,7 +4,7 @@ export const Journey = () => {
   const { journey } = homepageData;
 
   return (
-    <section className="py-16 md:py-20 bg-gradient-to-br from-purple-600 via-violet-600 to-fuchsia-600 relative overflow-hidden">
+    <section className="py-16 md:py-20 bg-gradient-to-br from-green-600 via-[#023e8a] to-green-200 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div
@@ -24,7 +24,7 @@ export const Journey = () => {
               <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
                 {journey.headline}
               </h2>
-              <p className="text-xl text-purple-50">{journey.subheadline}</p>
+              <p className="text-xl text-green-50">{journey.subheadline}</p>
             </div>
 
             <div className="space-y-6">
@@ -37,7 +37,7 @@ export const Journey = () => {
                     <h3 className="text-2xl font-bold text-white mb-2">
                       {step.title}
                     </h3>
-                    <p className="text-purple-50 text-lg leading-relaxed">
+                    <p className="text-green-50 text-lg leading-relaxed">
                       {step.description}
                     </p>
                   </div>

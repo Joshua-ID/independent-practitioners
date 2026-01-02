@@ -38,7 +38,7 @@ export const Footer = () => {
                   <a
                     key={index}
                     href={social.href}
-                    className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center active:bg-purple-600 transition-colors min-h-[44px] min-w-[44px]"
+                    className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center active:bg-green-600 transition-colors min-h-[44px] min-w-[44px]"
                     aria-label={social.platform}
                   >
                     <Icon size={20} />
@@ -56,7 +56,7 @@ export const Footer = () => {
                 <li key={index}>
                   <a
                     href={item.href}
-                    className="hover:text-purple-400 active:text-purple-300 transition-colors block py-1 min-h-[44px] flex items-center"
+                    className="hover:text-green-400 active:text-green-300 transition-colors block py-1 min-h-[44px] flex items-center"
                   >
                     {item.label}
                   </a>
@@ -73,7 +73,7 @@ export const Footer = () => {
                 <li key={index}>
                   <a
                     href={item.href}
-                    className="hover:text-purple-400 active:text-purple-300 transition-colors block py-1 min-h-[44px] flex items-center"
+                    className="hover:text-green-400 active:text-green-300 transition-colors block py-1 min-h-[44px] flex items-center"
                   >
                     {item.label}
                   </a>
@@ -90,7 +90,7 @@ export const Footer = () => {
                 <li key={index}>
                   <a
                     href={item.href}
-                    className="hover:text-purple-400 active:text-purple-300 transition-colors block py-1 min-h-[44px] flex items-center"
+                    className="hover:text-green-400 active:text-green-300 transition-colors block py-1 min-h-[44px] flex items-center"
                   >
                     {item.label}
                   </a>
@@ -104,15 +104,15 @@ export const Footer = () => {
         <div className="border-t border-gray-800 pt-8 mb-8">
           <div className="grid sm:grid-cols-3 gap-6">
             <div className="flex items-center gap-3">
-              <Phone className="text-purple-500 flex-shrink-0" size={20} />
+              <Phone className="text-green-500 flex-shrink-0" size={20} />
               <span>{footer.contact.phone}</span>
             </div>
             <div className="flex items-center gap-3">
-              <Mail className="text-purple-500 flex-shrink-0" size={20} />
+              <Mail className="text-green-500 flex-shrink-0" size={20} />
               <span>{footer.contact.email}</span>
             </div>
             <div className="flex items-center gap-3">
-              <MapPin className="text-purple-500 flex-shrink-0" size={20} />
+              <MapPin className="text-green-500 flex-shrink-0" size={20} />
               <span>{footer.contact.address}</span>
             </div>
           </div>
