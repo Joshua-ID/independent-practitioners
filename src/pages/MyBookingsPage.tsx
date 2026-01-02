@@ -131,12 +131,12 @@ export default function MyBookingsPage() {
       <header className="bg-white/80 backdrop-blur-md border-b border-purple-100 sticky top-0 z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between">
-            <a
-              href="/"
+            <Link
+              to="/"
               className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-purple-800 bg-clip-text text-transparent"
             >
               TherapySpace
-            </a>
+            </Link>
             <a
               href="/"
               className="text-purple-600 hover:text-purple-800 font-medium transition-colors"
@@ -150,7 +150,9 @@ export default function MyBookingsPage() {
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="mb-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-2">My Bookings</h1>
+          <h1 className="text-lg sm:text-2xl font-bold text-gray-900 mb-2">
+            My Bookings
+          </h1>
           <p className="text-gray-600">
             Manage your upcoming and past appointments
           </p>
@@ -225,16 +227,16 @@ export default function MyBookingsPage() {
               </div>
             </div>
 
-            <div className="flex gap-3">
+            <div className="flex gap-3 flex-wrap">
               <button
                 onClick={() => setShowCancelDialog(false)}
-                className="flex-1 px-4 py-2 border-2 border-gray-300 rounded-full font-semibold text-gray-700 hover:bg-gray-50 transition-colors"
+                className="flex-1 whitespace-nowrap px-4 py-2 border-2 border-gray-300 rounded-full font-semibold text-gray-700 hover:bg-gray-50 transition-colors"
               >
                 Keep Booking
               </button>
               <button
                 onClick={handleCancelConfirm}
-                className="flex-1 px-4 py-2 bg-red-600 text-white rounded-full font-semibold hover:bg-red-700 transition-colors"
+                className="flex-1 whitespace-nowrap px-4 py-2 bg-red-600 text-white rounded-full font-semibold hover:bg-red-700 transition-colors"
               >
                 Cancel Booking
               </button>
@@ -411,7 +413,7 @@ function RescheduleModal({ booking, onClose, onSubmit }: RescheduleModalProps) {
   };
 
   return (
-    <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4 overflow-y-auto">
+    <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-2 sm:p-4 overflow-y-auto">
       <div className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full my-8">
         <div className="p-6 border-b border-gray-200">
           <div className="flex items-center justify-between">
@@ -427,7 +429,7 @@ function RescheduleModal({ booking, onClose, onSubmit }: RescheduleModalProps) {
           </div>
         </div>
 
-        <div className="p-6">
+        <div className="p-3 sm:p-5">
           <div className="mb-6 p-4 bg-purple-50 rounded-lg">
             <h4 className="font-semibold text-gray-900 mb-2">
               Current Appointment
@@ -461,7 +463,7 @@ function RescheduleModal({ booking, onClose, onSubmit }: RescheduleModalProps) {
           />
         </div>
 
-        <div className="p-6 border-t border-gray-200 flex gap-3">
+        <div className="sm:p-6 p-3 border-t border-gray-200 flex gap-3 flex-wrap">
           <button
             onClick={onClose}
             className="flex-1 px-6 py-3 border-2 border-gray-300 rounded-full font-semibold text-gray-700 hover:bg-gray-50 transition-colors"
@@ -471,7 +473,7 @@ function RescheduleModal({ booking, onClose, onSubmit }: RescheduleModalProps) {
           <button
             onClick={handleSubmit}
             disabled={!selectedSlot}
-            className="flex-1 px-6 py-3 bg-gradient-to-r from-purple-600 to-purple-700 text-white rounded-full font-semibold hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+            className="flex-1 px-6 py-3 bg-gradient-to-r from-purple-600 to-purple-700 text-white rounded-full font-semibold hover:shadow-lg whitespace-nowrap transition-all disabled:opacity-50 disabled:cursor-not-allowed"
           >
             Confirm Reschedule
           </button>

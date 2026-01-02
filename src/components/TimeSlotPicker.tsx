@@ -111,7 +111,7 @@ export const TimeSlotPicker = ({
   return (
     <div className="space-y-6">
       <div>
-        <div className="flex items-center justify-between mb-4">
+        <div className="flex items-center flex-wrap gap-3 justify-between mb-4">
           <h3 className="text-medium font-semibold text-gray-900 flex items-center gap-2">
             <Calendar size={18} className="text-purple-600" />
             Select Date

@@ -119,7 +119,7 @@ export const RecurrenceControls: React.FC<RecurrenceControlsProps> = ({
   };
 
   return (
-    <div className="bg-white rounded-2xl shadow-lg p-6">
+    <div className="bg-white rounded-2xl shadow-lg p-3 sm:p-4 lg:p-6">
       <div className="flex items-center gap-3 mb-6">
         <Repeat className="w-6 h-6 text-purple-600" />
         <h3 className="text-xl font-bold text-gray-900">
@@ -133,7 +133,7 @@ export const RecurrenceControls: React.FC<RecurrenceControlsProps> = ({
           <label className="block text-sm font-medium text-gray-700 mb-2">
             Repeat Frequency
           </label>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+          <div className="grid grid-cols-2 sm:grid-cols-4 text-sm font-medium gap-3">
             <button
               onClick={() => handleTypeChange("none")}
               className="py-3 px-4 rounded-lg border-2 border-gray-200 hover:border-purple-300 active:border-purple-400 font-semibold transition-all min-h-[44px]"

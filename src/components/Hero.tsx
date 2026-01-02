@@ -30,10 +30,10 @@ export const Hero = () => {
               {hero.subheadline}
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row fle gap-4">
               <Link
                 to="/book"
-                className="group bg-purple-600 text-white px-8 py-4 rounded-full active:bg-purple-800 active:scale-95 transition-all shadow-lg hover:shadow-xl font-semibold flex items-center justify-center gap-2 min-h-[44px]"
+                className="bg-purple-600 text-white px-8 py-4 rounded-full active:bg-purple-800 active:scale-95 transition-all shadow-lg hover:shadow-xl font-semibold flex items-center justify-center gap-2 min-h-[44px]"
               >
                 {hero.primaryCTA}
                 <ArrowRight
@@ -43,7 +43,7 @@ export const Hero = () => {
               </Link>
               <Link
                 to="/practitioners"
-                className="bg-white text-purple-700 px-8 py-4 rounded-full active:bg-purple-50 active:scale-95 transition-all shadow-md font-semibold border-2 border-purple-600 min-h-[44px]"
+                className="bg-white text-purple-700 px-8 py-4 rounded-full active:bg-purple-50 active:scale-95 transition-all shadow-md font-semibold border-2 flex items-center justify-center  border-purple-600 min-h-[44px]"
               >
                 {hero.secondaryCTA}
               </Link>

@@ -1,6 +1,7 @@
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { Heart, Users, Award, Target, Shield, Sparkles } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function AboutPage() {
   return (
@@ -187,18 +188,18 @@ export default function AboutPage() {
             Take the first step toward better mental health and wellbeing
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/book"
+            <Link
+              to="/book"
               className="inline-block bg-white text-purple-700 px-8 py-4 rounded-full font-semibold hover:bg-purple-50 active:bg-purple-100 transition-colors shadow-lg"
             >
               Book a Session
-            </a>
-            <a
-              href="/contact"
+            </Link>
+            <Link
+              to="/contact"
               className="inline-block bg-purple-700 text-white border-2 border-white px-8 py-4 rounded-full font-semibold hover:bg-purple-600 active:bg-purple-800 transition-colors"
             >
               Contact Us
-            </a>
+            </Link>
           </div>
         </div>
       </section>

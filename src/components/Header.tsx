@@ -15,12 +15,12 @@ export const Header = () => {
               to="/"
               className="md:text-2xl text-lg font-bold text-purple-700"
             >
-              Therapy Practice
+              TherapySpace
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center text-sm md:font-medium space-x-3 md:space-x-6">
             <Link
               to="/practitioners"
               className="text-gray-700 hover:text-purple-600 transition-colors"
@@ -45,12 +45,12 @@ export const Header = () => {
             >
               My Bookings
             </Link>
-            <button
-              className="bg-purple-600 text-white px-6 py-2 rounded-full hover:bg-purple-700 active:bg-purple-800 active:scale-95 transition-all shadow-md hover:shadow-lg min-h-[44px]"
-              onClick={() => (window.location.href = "/book")}
+            <Link
+              to="/book"
+              className="bg-purple-600 text-white px-6 py-2 rounded-full hover:bg-purple-700 active:bg-purple-800 active:scale-95 transition-all shadow-md hover:shadow-lg"
             >
               Book Your Session
-            </button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}

@@ -25,7 +25,7 @@ export const WhyChooseUs = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 sm:gap-8 gap-3">
           {benefits.map((benefit, index) => (
             <div
               key={index}
