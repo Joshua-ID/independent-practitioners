@@ -102,7 +102,7 @@ export default function ContactPage() {
       {/* Contact Info & Form */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid lg:grid-cols-3 gap-4">
             {/* Contact Information */}
             <div className="lg:col-span-1 space-y-6">
               <div className="bg-white rounded-2xl shadow-lg p-6">
@@ -112,27 +112,27 @@ export default function ContactPage() {
 
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
-                      <Phone className="w-6 h-6 text-purple-600" />
+                    <div className="p-3 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
+                      <Phone className="w-4 h-4 text-purple-600" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">
                         Phone
                       </h3>
-                      <p className="text-gray-700">(555) 123-4567</p>
+                      <p className="text-gray-700">+234 809 3223 489</p>
                       <p className="text-sm text-gray-600">Mon-Fri 9am-6pm</p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
-                      <Mail className="w-6 h-6 text-purple-600" />
+                    <div className="p-3 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
+                      <Mail className="w-4 h-4 text-purple-600" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">
                         Email
                       </h3>
-                      <p className="text-gray-700">hello@therapyspace.com</p>
+                      <p className="text-gray-700">idarajoshua12@gmail.com</p>
                       <p className="text-sm text-gray-600">
                         We'll respond within 24 hours
                       </p>
@@ -140,22 +140,23 @@ export default function ContactPage() {
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
-                      <MapPin className="w-6 h-6 text-purple-600" />
+                    <div className="p-3 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
+                      <MapPin className="w-4 h-4 text-purple-600" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">
                         Address
                       </h3>
-                      <p className="text-gray-700">123 Wellness Street</p>
-                      <p className="text-gray-700">Suite 200</p>
+                      <p className="text-gray-700">
+                        123 Wellness Street, Suite 200
+                      </p>
                       <p className="text-gray-700">San Francisco, CA 94102</p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
-                      <Clock className="w-6 h-6 text-purple-600" />
+                    <div className="p-3 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
+                      <Clock className="w-4 h-4 text-purple-600" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">
@@ -167,7 +168,7 @@ export default function ContactPage() {
                       <p className="text-gray-700">
                         Saturday: 10:00 AM - 4:00 PM
                       </p>
-                      <p className="text-gray-700">Sunday: Closed</p>
+                      <p className="text-red-700">Sunday: Closed</p>
                     </div>
                   </div>
                 </div>
@@ -189,7 +190,7 @@ export default function ContactPage() {
 
             {/* Contact Form */}
             <div className="lg:col-span-2">
-              <div className="bg-white rounded-2xl shadow-lg p-8">
+              <div className="bg-white rounded-2xl shadow-lg p-3 sm:p-6">
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">
                   Send Us a Message
                 </h2>
@@ -209,7 +210,7 @@ export default function ContactPage() {
                 )}
 
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-6">
+                  <div className="grid md:grid-cols-2 gap-3">
                     <div>
                       <label
                         htmlFor="name"
@@ -225,9 +226,9 @@ export default function ContactPage() {
                           setFormData({ ...formData, name: e.target.value })
                         }
                         className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 min-h-[44px] ${
-                          errors.name ? "border-red-500" : "border-gray-300"
+                          errors.name ? "border-red-100" : "border-gray-300"
                         }`}
-                        placeholder="John Doe"
+                        placeholder="Please enter your full name"
                       />
                       {errors.name && (
                         <p className="mt-1 text-sm text-red-600">
@@ -251,9 +252,9 @@ export default function ContactPage() {
                           setFormData({ ...formData, email: e.target.value })
                         }
                         className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 min-h-[44px] ${
-                          errors.email ? "border-red-500" : "border-gray-300"
+                          errors.email ? "border-red-100" : "border-gray-300"
                         }`}
-                        placeholder="john@example.com"
+                        placeholder="Please enter your email address"
                       />
                       {errors.email && (
                         <p className="mt-1 text-sm text-red-600">
@@ -263,7 +264,7 @@ export default function ContactPage() {
                     </div>
                   </div>
 
-                  <div className="grid md:grid-cols-2 gap-6">
+                  <div className="grid md:grid-cols-2 gap-3">
                     <div>
                       <label
                         htmlFor="phone"
@@ -279,7 +280,7 @@ export default function ContactPage() {
                           setFormData({ ...formData, phone: e.target.value })
                         }
                         className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 min-h-[44px]"
-                        placeholder="(555) 123-4567"
+                        placeholder="Please enter your phone number"
                       />
                     </div>
 
@@ -298,7 +299,7 @@ export default function ContactPage() {
                           setFormData({ ...formData, subject: e.target.value })
                         }
                         className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 min-h-[44px] ${
-                          errors.subject ? "border-red-500" : "border-gray-300"
+                          errors.subject ? "border-red-100" : "border-gray-300"
                         }`}
                         placeholder="How can we help?"
                       />
@@ -325,7 +326,7 @@ export default function ContactPage() {
                         setFormData({ ...formData, message: e.target.value })
                       }
                       className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 resize-none ${
-                        errors.message ? "border-red-500" : "border-gray-300"
+                        errors.message ? "border-red-100" : "border-gray-300"
                       }`}
                       placeholder="Tell us more about what you need..."
                     />
@@ -366,7 +367,7 @@ export default function ContactPage() {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-12">
             Frequently Asked Questions
           </h2>
-          <div className="space-y-6">
+          <div className="space-y-3">
             <div className="bg-purple-50 rounded-xl p-6">
               <h3 className="text-lg font-bold text-gray-900 mb-2">
                 How quickly will I receive a response?
