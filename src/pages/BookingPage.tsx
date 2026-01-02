@@ -16,10 +16,10 @@ import {
   ArrowLeft,
   Calendar,
   AlertCircle,
-  Home,
   HomeIcon,
 } from "lucide-react";
 import { RecurrenceControls } from "@/components/RecurrenceControl";
+import { Link } from "react-router-dom";
 
 type BookingStep = "practitioners" | "timeslot" | "form" | "success";
 
@@ -134,13 +134,13 @@ export const BookingPage = () => {
                 Book a Session
               </h1>
             </div>
-            <a
-              href="/"
+            <Link
+              to="/"
               className="text-purple-600 flex items-center gap-2 hover:text-purple-700 font-medium"
             >
               <HomeIcon size={18} />
               <span className="hidden sm:flex">Home</span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -363,7 +363,6 @@ export const BookingPage = () => {
 
             <div className="mt-8 w-full flex justify-center items-center">
               <button
-                disabled={!!selectedSlot}
                 onClick={handleContinueToForm}
                 className={`w-full bg-purple-600 text-white py-3 px-6 rounded-full ${
                   selectedSlot
@@ -470,12 +469,12 @@ export const BookingPage = () => {
                 >
                   Book Another Session
                 </button>
-                <a
-                  href="/"
+                <Link
+                  to="/"
                   className="block w-full bg-white text-purple-700 py-3 px-6 rounded-full active:bg-purple-50 active:scale-95 transition-all font-semibold border-2 border-purple-600 min-h-[44px]"
                 >
                   Return to Home
-                </a>
+                </Link>
               </div>
             </div>
           </div>

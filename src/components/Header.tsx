@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -10,40 +11,40 @@ export const Header = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a
-              href="/"
+            <Link
+              to="/"
               className="md:text-2xl text-lg font-bold text-purple-700"
             >
               Therapy Practice
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <a
-              href="/practitioners"
+            <Link
+              to="/practitioners"
               className="text-gray-700 hover:text-purple-600 transition-colors"
             >
               Practitioners
-            </a>
-            <a
-              href="/about"
+            </Link>
+            <Link
+              to="/about"
               className="text-gray-700 hover:text-purple-600 transition-colors"
             >
               About
-            </a>
-            <a
-              href="/contact"
+            </Link>
+            <Link
+              to="/contact"
               className="text-gray-700 hover:text-purple-600 transition-colors"
             >
               Contact
-            </a>
-            <a
-              href="/my-bookings"
+            </Link>
+            <Link
+              to="/my-bookings"
               className="text-gray-700 hover:text-purple-600 transition-colors font-medium"
             >
               My Bookings
-            </a>
+            </Link>
             <button
               className="bg-purple-600 text-white px-6 py-2 rounded-full hover:bg-purple-700 active:bg-purple-800 active:scale-95 transition-all shadow-md hover:shadow-lg min-h-[44px]"
               onClick={() => (window.location.href = "/book")}
@@ -65,34 +66,34 @@ export const Header = () => {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden py-4 space-y-3">
-            <a
-              href="/practitioners"
+            <Link
+              to="/practitioners"
               className="block px-4 py-3 text-gray-700 active:bg-purple-50 rounded-lg min-h-[44px] flex items-center"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Practitioners
-            </a>
-            <a
-              href="/about"
+            </Link>
+            <Link
+              to="/about"
               className="block px-4 py-3 text-gray-700 active:bg-purple-50 rounded-lg min-h-[44px] flex items-center"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               About
-            </a>
-            <a
-              href="/contact"
+            </Link>
+            <Link
+              to="/contact"
               className="block px-4 py-3 text-gray-700 active:bg-purple-50 rounded-lg min-h-[44px] flex items-center"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Contact
-            </a>
-            <a
-              href="/my-bookings"
+            </Link>
+            <Link
+              to="/my-bookings"
               className="block px-4 py-3 text-gray-700 active:bg-purple-50 rounded-lg min-h-[44px] flex items-center font-medium"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               My Bookings
-            </a>
+            </Link>
             <button
               className="w-full bg-purple-600 text-white px-6 py-3 rounded-full active:bg-purple-800 active:scale-95 transition-all min-h-[44px]"
               onClick={() => (window.location.href = "/book")}

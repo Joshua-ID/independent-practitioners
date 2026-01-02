@@ -191,86 +191,88 @@ export const BookingForm = ({
         </div>
       </div>
 
-      <div>
-        <label className="block text-sm font-medium text-gray-700 mb-2">
-          <User size={16} className="inline mr-1" />
-          Full Name *
-        </label>
-        <input
-          type="text"
-          value={formData.clientName}
-          onChange={(e) =>
-            setFormData({ ...formData, clientName: e.target.value })
-          }
-          className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent min-h-[44px] ${
-            errors.clientName ? "border-red-500" : "border-gray-300"
-          }`}
-          placeholder="John Doe"
-        />
-        {errors.clientName && (
-          <p className="text-red-500 text-sm mt-1">{errors.clientName}</p>
-        )}
-      </div>
+      <div className="grid grid-cols-2 gap-3">
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-2">
+            <User size={16} className="inline mr-1" />
+            Full Name *
+          </label>
+          <input
+            type="text"
+            value={formData.clientName}
+            onChange={(e) =>
+              setFormData({ ...formData, clientName: e.target.value })
+            }
+            className={`w-full px-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent min-h-[44px] ${
+              errors.clientName ? "border-red-500" : "border-gray-300"
+            }`}
+            placeholder="Please enter your fullname"
+          />
+          {errors.clientName && (
+            <p className="text-red-500 text-sm mt-1">{errors.clientName}</p>
+          )}
+        </div>
 
-      <div>
-        <label className="block text-sm font-medium text-gray-700 mb-2">
-          <Mail size={16} className="inline mr-1" />
-          Email Address *
-        </label>
-        <input
-          type="email"
-          value={formData.clientEmail}
-          onChange={(e) =>
-            setFormData({ ...formData, clientEmail: e.target.value })
-          }
-          className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent min-h-[44px] ${
-            errors.clientEmail ? "border-red-500" : "border-gray-300"
-          }`}
-          placeholder="john@example.com"
-        />
-        {errors.clientEmail && (
-          <p className="text-red-500 text-sm mt-1">{errors.clientEmail}</p>
-        )}
-      </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-2">
+            <Mail size={16} className="inline mr-1" />
+            Email Address *
+          </label>
+          <input
+            type="email"
+            value={formData.clientEmail}
+            onChange={(e) =>
+              setFormData({ ...formData, clientEmail: e.target.value })
+            }
+            className={`w-full px-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent min-h-[44px] ${
+              errors.clientEmail ? "border-red-500" : "border-gray-300"
+            }`}
+            placeholder="Please enter your email address"
+          />
+          {errors.clientEmail && (
+            <p className="text-red-500 text-sm mt-1">{errors.clientEmail}</p>
+          )}
+        </div>
 
-      <div>
-        <label className="block text-sm font-medium text-gray-700 mb-2">
-          <Phone size={16} className="inline mr-1" />
-          Phone Number *
-        </label>
-        <input
-          type="tel"
-          value={formData.clientPhone}
-          onChange={(e) =>
-            setFormData({ ...formData, clientPhone: e.target.value })
-          }
-          className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent min-h-[44px] ${
-            errors.clientPhone ? "border-red-500" : "border-gray-300"
-          }`}
-          placeholder="(555) 123-4567"
-        />
-        {errors.clientPhone && (
-          <p className="text-red-500 text-sm mt-1">{errors.clientPhone}</p>
-        )}
-      </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-2">
+            <Phone size={16} className="inline mr-1" />
+            Phone Number *
+          </label>
+          <input
+            type="tel"
+            value={formData.clientPhone}
+            onChange={(e) =>
+              setFormData({ ...formData, clientPhone: e.target.value })
+            }
+            className={`w-full px-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent min-h-[44px] ${
+              errors.clientPhone ? "border-red-500" : "border-gray-300"
+            }`}
+            placeholder="+234 800 000 0000"
+          />
+          {errors.clientPhone && (
+            <p className="text-red-500 text-sm mt-1">{errors.clientPhone}</p>
+          )}
+        </div>
 
-      <div>
-        <label className="block text-sm font-medium text-gray-700 mb-2">
-          Service Type *
-        </label>
-        <select
-          value={formData.serviceType}
-          onChange={(e) =>
-            setFormData({ ...formData, serviceType: e.target.value })
-          }
-          className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent min-h-[44px]"
-        >
-          {serviceTypes.map((service) => (
-            <option key={service.value} value={service.value}>
-              {service.label}
-            </option>
-          ))}
-        </select>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-2">
+            Service Type *
+          </label>
+          <select
+            value={formData.serviceType}
+            onChange={(e) =>
+              setFormData({ ...formData, serviceType: e.target.value })
+            }
+            className="w-full px-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent min-h-[44px]"
+          >
+            {serviceTypes.map((service) => (
+              <option key={service.value} value={service.value}>
+                {service.label}
+              </option>
+            ))}
+          </select>
+        </div>
       </div>
 
       <div>
@@ -282,7 +284,7 @@ export const BookingForm = ({
           value={formData.notes}
           onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
           rows={4}
-          className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent resize-none"
+          className="w-full px-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent resize-none"
           placeholder="Any specific concerns or preferences..."
         />
       </div>

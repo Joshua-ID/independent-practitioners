@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { homepageData } from "../data/homepage";
 import { ArrowRight, CheckCircle } from "lucide-react";
 
@@ -30,16 +31,22 @@ export const Hero = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="group bg-purple-600 text-white px-8 py-4 rounded-full active:bg-purple-800 active:scale-95 transition-all shadow-lg hover:shadow-xl font-semibold flex items-center justify-center gap-2 min-h-[44px]">
+              <Link
+                to="/book"
+                className="group bg-purple-600 text-white px-8 py-4 rounded-full active:bg-purple-800 active:scale-95 transition-all shadow-lg hover:shadow-xl font-semibold flex items-center justify-center gap-2 min-h-[44px]"
+              >
                 {hero.primaryCTA}
                 <ArrowRight
                   size={20}
                   className="group-hover:translate-x-1 transition-transform"
                 />
-              </button>
-              <button className="bg-white text-purple-700 px-8 py-4 rounded-full active:bg-purple-50 active:scale-95 transition-all shadow-md font-semibold border-2 border-purple-600 min-h-[44px]">
+              </Link>
+              <Link
+                to="/practitioners"
+                className="bg-white text-purple-700 px-8 py-4 rounded-full active:bg-purple-50 active:scale-95 transition-all shadow-md font-semibold border-2 border-purple-600 min-h-[44px]"
+              >
                 {hero.secondaryCTA}
-              </button>
+              </Link>
             </div>
           </div>
 

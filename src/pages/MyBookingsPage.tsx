@@ -19,6 +19,7 @@ import {
   type TimeSlot,
 } from "../data/booking";
 import { TimeSlotPicker } from "../components/TimeSlotPicker";
+import { Link } from "react-router-dom";
 
 export default function MyBookingsPage() {
   const [bookings, setBookings] = useState<Booking[]>([]);
@@ -165,12 +166,12 @@ export default function MyBookingsPage() {
             <p className="text-gray-600 mb-6">
               Start your wellness journey by booking your first session
             </p>
-            <a
-              href="/book"
+            <Link
+              to="/book"
               className="inline-block bg-gradient-to-r from-purple-600 to-purple-700 text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all"
             >
               Book a Session
-            </a>
+            </Link>
           </div>
         ) : (
           <div className="space-y-4">

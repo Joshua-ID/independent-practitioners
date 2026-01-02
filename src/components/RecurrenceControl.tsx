@@ -62,28 +62,28 @@ export const RecurrenceControls: React.FC<RecurrenceControlsProps> = ({
             <label className="block text-sm font-medium text-gray-700 mb-2">
               Repeat Frequency
             </label>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-sm font-medium">
               <button
                 onClick={() => handleTypeChange("none")}
-                className="py-3 px-4 rounded-lg border-2 border-purple-600 bg-purple-50 text-purple-700 font-semibold transition-all min-h-[44px]"
+                className="py-3 px-4 rounded-lg border-2 border-purple-600 bg-purple-50 text-purple-700  transition-all min-h-[44px]"
               >
                 No Repeat
               </button>
               <button
                 onClick={() => handleTypeChange("daily")}
-                className="py-3 px-4 rounded-lg border-2 border-gray-200 hover:border-purple-300 active:border-purple-400 font-semibold transition-all min-h-[44px]"
+                className="py-3 px-4 rounded-lg border-2 border-gray-200 hover:border-purple-300 active:border-purple-400  transition-all min-h-[44px]"
               >
                 Daily
               </button>
               <button
                 onClick={() => handleTypeChange("weekly")}
-                className="py-3 px-4 rounded-lg border-2 border-gray-200 hover:border-purple-300 active:border-purple-400 font-semibold transition-all min-h-[44px]"
+                className="py-3 px-4 rounded-lg border-2 border-gray-200 hover:border-purple-300 active:border-purple-400  transition-all min-h-[44px]"
               >
                 Weekly
               </button>
               <button
                 onClick={() => handleTypeChange("monthly")}
-                className="py-3 px-4 rounded-lg border-2 border-gray-200 hover:border-purple-300 active:border-purple-400 font-semibold transition-all min-h-[44px]"
+                className="py-3 px-4 rounded-lg border-2 border-gray-200 hover:border-purple-300 active:border-purple-400  transition-all min-h-[44px]"
               >
                 Monthly
               </button>
@@ -205,7 +205,7 @@ export const RecurrenceControls: React.FC<RecurrenceControlsProps> = ({
             <label className="block text-sm font-medium text-gray-700 mb-2">
               Sessions
             </label>
-            <div className="flex gap-5 items-center">
+            <div className="flex gap-x-5 gap-y-3 items-center flex-wrap">
               {/* After N Occurrences */}
               <div className="flex items-center gap-3">
                 <input

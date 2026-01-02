@@ -2,6 +2,7 @@ import { practitioners } from "../data/booking";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { Users, Award, Heart, Star } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function PractitionersPage() {
   return (
@@ -121,12 +122,12 @@ export default function PractitionersPage() {
                       ))}
                     </div>
                   </div>
-                  <a
-                    href="/book"
+                  <Link
+                    to="/book"
                     className="block w-full text-center bg-purple-600 text-white py-3 rounded-full font-semibold hover:bg-purple-700 active:bg-purple-800 transition-colors"
                   >
                     Book Session
-                  </a>
+                  </Link>
                 </div>
               </div>
             ))}
