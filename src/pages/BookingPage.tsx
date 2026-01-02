@@ -403,16 +403,16 @@ export const BookingPage = () => {
         {/* Step 4: Success */}
         {step === "success" && confirmedBooking && (
           <div className="max-w-2xl mx-auto">
-            <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 text-center">
+            <div className="bg-white rounded-2xl shadow-lg p-3 md:p-8 text-center">
               <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
                 <CheckCircle size={40} className="text-green-600" />
               </div>
 
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              <h2 className="sm:text-2xl  text-lg font-bold text-gray-900 mb-4">
                 Booking Confirmed!
               </h2>
 
-              <p className="text-lg text-gray-600 mb-8">
+              <p className="font-medium text-gray-600 mb-8">
                 Your therapy session has been successfully scheduled. A
                 confirmation email has been sent to{" "}
                 <strong>{confirmedBooking.clientEmail}</strong>
