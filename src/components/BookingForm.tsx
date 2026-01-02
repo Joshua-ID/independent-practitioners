@@ -191,7 +191,7 @@ export const BookingForm = ({
         </div>
       </div>
 
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid sm:grid-cols-2 gap-3">
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">
             <User size={16} className="inline mr-1" />
