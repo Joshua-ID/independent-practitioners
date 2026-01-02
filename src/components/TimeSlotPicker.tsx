@@ -112,8 +112,8 @@ export const TimeSlotPicker = ({
     <div className="space-y-6">
       <div>
         <div className="flex items-center justify-between mb-4">
-          <h3 className="text-lg font-semibold text-gray-900 flex items-center gap-2">
-            <Calendar size={20} className="text-purple-600" />
+          <h3 className="text-medium font-semibold text-gray-900 flex items-center gap-2">
+            <Calendar size={18} className="text-purple-600" />
             Select Date
           </h3>
 
@@ -131,11 +131,11 @@ export const TimeSlotPicker = ({
         </div>
 
         {/* Month Navigation */}
-        <div className="flex items-center justify-between mb-4 bg-purple-50 rounded-lg p-3">
+        <div className="flex items-center justify-between mb-4 bg-purple-50 rounded-lg p-1">
           <button
             onClick={goToPreviousMonth}
             disabled={!canGoPrevious}
-            className="p-2 rounded-lg hover:bg-purple-100 active:bg-purple-200 disabled:opacity-40 disabled:cursor-not-allowed transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
+            className="p-2 rounded-full hover:bg-purple-200 active:bg-purple-200 disabled:opacity-40 disabled:cursor-not-allowed transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
             aria-label="Previous month"
           >
             <ChevronLeft size={20} className="text-purple-700" />
@@ -146,7 +146,7 @@ export const TimeSlotPicker = ({
           <button
             onClick={goToNextMonth}
             disabled={!canGoNext}
-            className="p-2 rounded-lg hover:bg-purple-100 active:bg-purple-200 disabled:opacity-40 disabled:cursor-not-allowed transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
+            className="p-2 rounded-full hover:bg-purple-200 active:bg-purple-200 disabled:opacity-40 disabled:cursor-not-allowed transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
             aria-label="Next month"
           >
             <ChevronRight size={20} className="text-purple-700" />
@@ -155,7 +155,7 @@ export const TimeSlotPicker = ({
 
         {/* Date Grid */}
         {currentMonthDates.length > 0 ? (
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+          <div className="grid grid-cols-2  sm:grid-cols-4 lg:grid-cols-6 gap-2 md:gap-3">
             {currentMonthDates.map((date) => {
               const hasSlots = hasAvailableSlots(date);
               return (
@@ -163,7 +163,7 @@ export const TimeSlotPicker = ({
                   key={date}
                   onClick={() => hasSlots && setSelectedDate(date)}
                   disabled={!hasSlots}
-                  className={`py-3 px-4 rounded-lg border-2 transition-all font-medium min-h-[44px] relative ${
+                  className={`py-3 px-4 rounded-lg border-2 transition-all text-xs sm:text-sm font-medium min-h-[44px] relative ${
                     selectedDate === date
                       ? "border-purple-600 bg-purple-50 text-purple-700"
                       : hasSlots
@@ -188,17 +188,21 @@ export const TimeSlotPicker = ({
 
       {selectedDate && (
         <div>
-          <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
+          <h3 className="text-medium font-semibold text-gray-900 mb-4 flex items-center gap-2">
             <Clock size={20} className="text-purple-600" />
-            Select Time for {formatDate(selectedDate)}
+            Select Time{" "}
+            <span className="bg-purple-200 px-2 py-0.5 rounded-md">
+              {" "}
+              {formatDate(selectedDate)}
+            </span>
           </h3>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+          <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-2 md:gap-3">
             {currentDateSlots.map((slot) => (
               <button
                 key={slot.id}
                 onClick={() => slot.available && onSelectSlot(slot)}
                 disabled={!slot.available}
-                className={`py-3 px-4 rounded-lg border-2 transition-all font-medium min-h-[44px] ${
+                className={`py-3 px-4 rounded-lg border-2 transition-all text-xs sm:text-sm font-medium min-h-[44px] ${
                   selectedSlot?.id === slot.id
                     ? "border-purple-600 bg-purple-50 text-purple-700"
                     : slot.available

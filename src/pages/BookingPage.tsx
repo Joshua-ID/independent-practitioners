@@ -11,7 +11,14 @@ import {
 import { PractitionerCard } from "../components/PractitionerCard";
 import { TimeSlotPicker } from "../components/TimeSlotPicker";
 import { BookingForm } from "../components/BookingForm";
-import { CheckCircle, ArrowLeft, Calendar, AlertCircle } from "lucide-react";
+import {
+  CheckCircle,
+  ArrowLeft,
+  Calendar,
+  AlertCircle,
+  Home,
+  HomeIcon,
+} from "lucide-react";
 import { RecurrenceControls } from "@/components/RecurrenceControl";
 
 type BookingStep = "practitioners" | "timeslot" | "form" | "success";
@@ -122,16 +129,17 @@ export const BookingPage = () => {
                   <ArrowLeft size={24} />
                 </button>
               )}
-              <h1 className="text-2xl md:text-3xl font-bold text-gray-900 flex items-center gap-2">
-                <Calendar className="text-purple-600" size={28} />
+              <h1 className="md:text-2xl text-lg font-bold text-purple-700 flex items-center gap-2">
+                <Calendar className="text-purple-600" size={22} />
                 Book a Session
               </h1>
             </div>
             <a
               href="/"
-              className="text-purple-600 hover:text-purple-700 font-medium"
+              className="text-purple-600 flex items-center gap-2 hover:text-purple-700 font-medium"
             >
-              Home
+              <HomeIcon size={18} />
+              <span className="hidden sm:flex">Home</span>
             </a>
           </div>
         </div>
@@ -217,7 +225,7 @@ export const BookingPage = () => {
                 counselors
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-3 lg:gap-4">
               {practitioners.map((practitioner) => (
                 <PractitionerCard
                   key={practitioner.id}
@@ -232,7 +240,7 @@ export const BookingPage = () => {
         {/* Step 2: Select Time Slot */}
         {step === "timeslot" && selectedPractitioner && (
           <div>
-            <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8 mb-8">
+            <div className="bg-white rounded-2xl shadow-lg p-3 sm:p-4 lg:p-6 mb-8">
               <div className="flex items-start gap-4 mb-6">
                 <img
                   src={selectedPractitioner.image}
@@ -353,23 +361,29 @@ export const BookingPage = () => {
                 </div>
               )}
 
-            {selectedSlot && (
-              <div className="mt-8">
-                <button
-                  onClick={handleContinueToForm}
-                  className="w-full bg-purple-600 text-white py-3 px-6 rounded-full active:bg-purple-800 active:scale-95 transition-all font-semibold shadow-md hover:shadow-lg min-h-[44px]"
-                >
-                  Continue to Booking Form
-                </button>
-              </div>
-            )}
+            <div className="mt-8 w-full flex justify-center items-center">
+              <button
+                disabled={!!selectedSlot}
+                onClick={handleContinueToForm}
+                className={`w-full bg-purple-600 text-white py-3 px-6 rounded-full ${
+                  selectedSlot
+                    ? "active:bg-purple-800 active:scale-95 transition-all shadow-md hover:shadow-lg min-h-[44px]"
+                    : "cursor-not-allowed bg-purple-300!  font-semibold"
+                }`}
+              >
+                {" "}
+                {selectedSlot
+                  ? "Continue to Booking Form"
+                  : "Select a slot to complete booking"}
+              </button>
+            </div>
           </div>
         )}
 
         {/* Step 3: Booking Form */}
         {step === "form" && selectedPractitioner && selectedSlot && (
           <div className="max-w-2xl mx-auto">
-            <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8">
+            <div className="bg-white rounded-2xl shadow-lg p-3 sm:p-4 lg:p-6">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">
                 Complete Your Booking
               </h2>

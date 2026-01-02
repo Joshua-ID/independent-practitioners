@@ -10,7 +10,10 @@ export const Header = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="/" className="text-2xl font-bold text-purple-700">
+            <a
+              href="/"
+              className="md:text-2xl text-lg font-bold text-purple-700"
+            >
               Therapy Practice
             </a>
           </div>

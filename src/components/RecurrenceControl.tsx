@@ -49,7 +49,7 @@ export const RecurrenceControls: React.FC<RecurrenceControlsProps> = ({
 
   if (recurrenceRule.type === "none") {
     return (
-      <div className="bg-white rounded-2xl shadow-lg p-6">
+      <div className="bg-white rounded-2xl shadow-lg p-3 sm:p-4 lg:p-6">
         <div className="flex items-center gap-3 mb-4">
           <Repeat className="w-6 h-6 text-purple-600" />
           <h3 className="text-xl font-bold text-gray-900">
@@ -173,93 +173,95 @@ export const RecurrenceControls: React.FC<RecurrenceControlsProps> = ({
           </div>
         </div>
 
-        {/* Interval Selection */}
-        <div>
-          <label
-            htmlFor="interval"
-            className="block text-sm font-medium text-gray-700 mb-2"
-          >
-            Repeat Every
-          </label>
-          <div className="flex items-center gap-3">
-            <input
-              type="number"
-              id="interval"
-              min="1"
-              max="12"
-              value={recurrenceRule.interval}
-              onChange={(e) =>
-                handleIntervalChange(parseInt(e.target.value) || 1)
-              }
-              className="w-24 px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-purple-600 focus:outline-none min-h-[44px]"
-            />
-            <span className="text-gray-700 font-medium">
-              {getIntervalLabel()}
-            </span>
-          </div>
-        </div>
-
-        {/* End Condition Selection */}
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
-            End Condition
-          </label>
-          <div className="space-y-3">
-            {/* After N Occurrences */}
+        <div className="flex gap-5 items-center flex-wrap">
+          {/* Interval Selection */}
+          <div>
+            <label
+              htmlFor="interval"
+              className="block text-sm font-medium text-gray-700 mb-2"
+            >
+              Repeat Every
+            </label>
             <div className="flex items-center gap-3">
               <input
-                type="radio"
-                id="end-occurrences"
-                name="endType"
-                checked={recurrenceRule.endType === "occurrences"}
-                onChange={() => handleEndTypeChange("occurrences")}
-                className="w-5 h-5 text-purple-600 focus:ring-purple-500"
+                type="number"
+                id="interval"
+                min="1"
+                max="12"
+                value={recurrenceRule.interval}
+                onChange={(e) =>
+                  handleIntervalChange(parseInt(e.target.value) || 1)
+                }
+                className="pl-2 border-2 border-gray-300 rounded-lg focus:border-purple-600 focus:outline-none min-h-[44px]"
               />
-              <label
-                htmlFor="end-occurrences"
-                className="flex items-center gap-3 flex-1"
-              >
-                <span className="text-gray-700">After</span>
-                <input
-                  type="number"
-                  min="1"
-                  max="52"
-                  value={recurrenceRule.occurrences || 4}
-                  onChange={(e) =>
-                    handleOccurrencesChange(parseInt(e.target.value) || 1)
-                  }
-                  disabled={recurrenceRule.endType !== "occurrences"}
-                  className="w-24 px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-purple-600 focus:outline-none min-h-[44px] disabled:bg-gray-100 disabled:cursor-not-allowed"
-                />
-                <span className="text-gray-700">sessions</span>
-              </label>
+              <span className="text-gray-700 font-medium">
+                {getIntervalLabel()}
+              </span>
             </div>
+          </div>
 
-            {/* On Specific Date */}
-            <div className="flex items-center gap-3">
-              <input
-                type="radio"
-                id="end-date"
-                name="endType"
-                checked={recurrenceRule.endType === "date"}
-                onChange={() => handleEndTypeChange("date")}
-                className="w-5 h-5 text-purple-600 focus:ring-purple-500"
-              />
-              <label
-                htmlFor="end-date"
-                className="flex items-center gap-3 flex-1"
-              >
-                <Calendar className="w-5 h-5 text-gray-600" />
-                <span className="text-gray-700">End by</span>
+          {/* End Condition Selection */}
+          <div className="sm:ml-10 sm:border-l-3 border-purple-300 sm:pl-8">
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Sessions
+            </label>
+            <div className="flex gap-5 items-center">
+              {/* After N Occurrences */}
+              <div className="flex items-center gap-3">
                 <input
-                  type="date"
-                  min={getMinEndDate()}
-                  value={recurrenceRule.endDate || ""}
-                  onChange={(e) => handleEndDateChange(e.target.value)}
-                  disabled={recurrenceRule.endType !== "date"}
-                  className="flex-1 px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-purple-600 focus:outline-none min-h-[44px] disabled:bg-gray-100 disabled:cursor-not-allowed"
+                  type="radio"
+                  id="end-occurrences"
+                  name="endType"
+                  checked={recurrenceRule.endType === "occurrences"}
+                  onChange={() => handleEndTypeChange("occurrences")}
+                  className="w-4 h-4 text-purple-600 focus:ring-purple-500"
                 />
-              </label>
+                <label
+                  htmlFor="end-occurrences"
+                  className="flex items-center gap-3 flex-1"
+                >
+                  <span className="text-gray-700">After</span>
+                  <input
+                    type="number"
+                    min="1"
+                    max="52"
+                    value={recurrenceRule.occurrences || 4}
+                    onChange={(e) =>
+                      handleOccurrencesChange(parseInt(e.target.value) || 1)
+                    }
+                    disabled={recurrenceRule.endType !== "occurrences"}
+                    className="pl-2 border-2 border-gray-300 rounded-lg focus:border-purple-600 focus:outline-none min-h-[44px] disabled:bg-gray-100 disabled:cursor-not-allowed"
+                  />
+                  <span className="text-gray-700">sessions</span>
+                </label>
+              </div>
+
+              {/* On Specific Date */}
+              <div className="flex items-center gap-3">
+                <input
+                  type="radio"
+                  id="end-date"
+                  name="endType"
+                  checked={recurrenceRule.endType === "date"}
+                  onChange={() => handleEndTypeChange("date")}
+                  className="w-4 h-4 text-purple-600 focus:ring-purple-500"
+                />
+                <label
+                  htmlFor="end-date"
+                  className="flex items-center gap-3 flex-1"
+                >
+                  <Calendar className="w-5 h-5 text-gray-600" />
+                  <span className="text-gray-700">End by</span>
+                  <input
+                    type="date"
+                    min={getMinEndDate()}
+                    value={recurrenceRule.endDate || ""}
+                    onChange={(e) => handleEndDateChange(e.target.value)}
+                    disabled={recurrenceRule.endType !== "date"}
+                    className="flex-1 px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-purple-600 focus:outline-none min-h-[44px] disabled:bg-gray-100 disabled:cursor-not-allowed"
+                  />
+                </label>
+              </div>
             </div>
           </div>
         </div>
