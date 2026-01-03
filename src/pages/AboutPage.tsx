@@ -16,7 +16,7 @@ export default function AboutPage() {
               <img
                 src="/src/assets/icon.png"
                 alt="Logo"
-                className="sm:hidden flex w-30 h-30 bg-linear-65 from-blue-400 to-green-400   rounded-full"
+                className=" flex w-30 h-30 bg-linear-65 from-blue-400 to-green-400   rounded-full"
               />
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
