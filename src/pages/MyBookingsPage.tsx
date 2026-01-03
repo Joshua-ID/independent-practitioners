@@ -137,12 +137,12 @@ export default function MyBookingsPage() {
             >
               TherapySpace
             </Link>
-            <a
-              href="/"
+            <Link
+              to="/"
               className="text-green-600 hover:text-green-800 font-medium transition-colors"
             >
               ← Back to Home
-            </a>
+            </Link>
           </div>
         </div>
       </header>
@@ -308,10 +308,10 @@ function BookingCard({
   const isPast = new Date(booking.date) < new Date();
 
   return (
-    <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+    <div className="bg-white relative rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
       <div className="p-6">
         <div className="flex items-start justify-between mb-4">
-          <div className="flex items-start gap-4">
+          <div className="flex items-start flex-col sm:flex-row gap-4">
             {practitioner && (
               <img
                 src={practitioner.image}
@@ -329,7 +329,7 @@ function BookingCard({
             </div>
           </div>
           <span
-            className={`px-3 py-1 rounded-full text-xs font-semibold border ${getStatusColor(
+            className={`absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-semibold border ${getStatusColor(
               booking.status
             )}`}
           >

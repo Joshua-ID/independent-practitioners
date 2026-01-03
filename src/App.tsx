@@ -11,6 +11,7 @@ import MyBookingsPage from "./pages/MyBookingsPage";
 import PractitionersPage from "./pages/PractitionersPage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
+import CookiesAlert from "./components/CookiesAlert";
 
 function HomePage() {
   return (
@@ -22,6 +23,7 @@ function HomePage() {
         <Journey />
         <ServicesGrid />
         <CTASection />
+        <CookiesAlert />
       </main>
       <Footer />
     </div>

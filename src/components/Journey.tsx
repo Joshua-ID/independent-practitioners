@@ -29,7 +29,10 @@ export const Journey = () => {
 
             <div className="space-y-6">
               {journey.steps.map((step, index) => (
-                <div key={index} className="flex gap-6 items-start group">
+                <div
+                  key={index}
+                  className="flex gap-3 items-start sm:flex-row sm:gap-5   flex-col"
+                >
                   <div className="flex-shrink-0 w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center font-bold text-2xl text-white group-hover:scale-110 transition-transform">
                     {step.number}
                   </div>

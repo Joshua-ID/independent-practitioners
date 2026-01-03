@@ -241,7 +241,7 @@ export const BookingPage = () => {
         {step === "timeslot" && selectedPractitioner && (
           <div>
             <div className="bg-white rounded-2xl shadow-lg p-3 sm:p-4 lg:p-6 mb-8">
-              <div className="flex items-start gap-4 mb-6">
+              <div className="flex items-start flex-col sm:flex-row gap-4 mb-6">
                 <img
                   src={selectedPractitioner.image}
                   alt={selectedPractitioner.name}

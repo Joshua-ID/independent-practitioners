@@ -32,7 +32,7 @@ export const ServicesGrid = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="group bg-white p-8 rounded-2xl shadow-md active:shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:scale-95 sm:hover:scale-100 border-2 border-transparent hover:border-green-600 min-h-[280px] flex flex-col"
+              className="bg-white p-3 sm:p-5 md:p-8 rounded-2xl shadow-md active:shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:scale-95 sm:hover:scale-100 border-2 border-transparent hover:border-green-600 min-h-[280px] flex flex-col"
             >
               <div className="w-16 h-16 bg-gradient-to-br from-green-100 to-violet-100 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform min-h-[44px] min-w-[44px]">
                 <i

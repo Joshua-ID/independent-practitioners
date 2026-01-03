@@ -13,7 +13,11 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="flex items-center justify-center mb-6">
-              <Heart className="w-16 h-16" />
+              <img
+                src="/src/assets/icon.png"
+                alt="Logo"
+                className="sm:hidden flex w-30 h-30 bg-linear-65 from-blue-400 to-green-400   rounded-full"
+              />
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
               About TherapySpace
@@ -30,7 +34,7 @@ export default function AboutPage() {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12">
-            <div className="bg-white rounded-2xl shadow-lg p-8">
+            <div className="bg-white rounded-2xl shadow-lg p-4 sm:p-6 md:p-8">
               <div className="flex items-center gap-3 mb-4">
                 <Target className="w-10 h-10 text-green-600" />
                 <h2 className="text-2xl font-bold text-gray-900">
@@ -45,7 +49,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl shadow-lg p-8">
+            <div className="bg-white rounded-2xl shadow-lg p-4 sm:p-6 md:p-8">
               <div className="flex items-center gap-3 mb-4">
                 <Sparkles className="w-10 h-10 text-green-600" />
                 <h2 className="text-2xl font-bold text-gray-900">Our Vision</h2>
@@ -99,7 +103,7 @@ export default function AboutPage() {
             Our Core Values
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
+            <div className="bg-white rounded-2xl shadow-lg p-4 sm:p-6 md:p-8 text-center hover:shadow-xl transition-shadow">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Heart className="w-8 h-8 text-green-600" />
               </div>
@@ -112,7 +116,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
+            <div className="bg-white rounded-2xl shadow-lg p-4 sm:p-6 md:p-8 text-center hover:shadow-xl transition-shadow">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Award className="w-8 h-8 text-green-600" />
               </div>
@@ -125,7 +129,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
+            <div className="bg-white rounded-2xl shadow-lg p-4 sm:p-6 md:p-8 text-center hover:shadow-xl transition-shadow">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Shield className="w-8 h-8 text-green-600" />
               </div>
@@ -138,7 +142,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
+            <div className="bg-white rounded-2xl shadow-lg p-4 sm:p-6 md:p-8 text-center hover:shadow-xl transition-shadow">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-8 h-8 text-green-600" />
               </div>
@@ -151,7 +155,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
+            <div className="bg-white rounded-2xl shadow-lg p-4 sm:p-6 md:p-8 text-center hover:shadow-xl transition-shadow">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Target className="w-8 h-8 text-green-600" />
               </div>
@@ -164,7 +168,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
+            <div className="bg-white rounded-2xl shadow-lg p-4 sm:p-6 md:p-8 text-center hover:shadow-xl transition-shadow">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Sparkles className="w-8 h-8 text-green-600" />
               </div>

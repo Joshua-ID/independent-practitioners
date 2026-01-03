@@ -15,7 +15,12 @@ export const Header = () => {
               to="/"
               className="md:text-2xl text-lg font-bold text-green-700"
             >
-              TherapySpace
+              <img
+                src="/src/assets/icon.png"
+                alt="Logo"
+                className="sm:hidden flex w-14 h-14"
+              />
+              <span className="sm:flex hidden">TherapySpace</span>
             </Link>
           </div>
 
