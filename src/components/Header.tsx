@@ -16,7 +16,7 @@ export const Header = () => {
               className="md:text-2xl text-lg font-bold text-green-700"
             >
               <img
-                src="/src/assets/icon.png"
+                src="/therapyIcon.png"
                 alt="Logo"
                 className="sm:hidden flex w-14 h-14"
               />
